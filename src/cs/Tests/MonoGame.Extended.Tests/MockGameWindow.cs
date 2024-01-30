@@ -1,7 +1,5 @@
 using System;
-using System.Drawing;
 using Microsoft.Xna.Framework;
-using Point = Microsoft.Xna.Framework.Point;
 using Rectangle = Microsoft.Xna.Framework.Rectangle;
 
 namespace MonoGame.Extended.Tests
@@ -10,20 +8,11 @@ namespace MonoGame.Extended.Tests
     {
         public override bool AllowUserResizing { get; set; }
         public override Rectangle ClientBounds { get; }
-        public override Point Position { get; set; }
         public override DisplayOrientation CurrentOrientation { get; }
         public override IntPtr Handle { get; }
         public override string ScreenDeviceName { get; }
 
         public MockGameWindow()
-        {
-        }
-
-        public override void BeginScreenDeviceChange(bool willBeFullScreen)
-        {
-        }
-
-        public override void EndScreenDeviceChange(string screenDeviceName, int clientWidth, int clientHeight)
         {
         }
 

@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Content.Pipeline;
 using Microsoft.Xna.Framework.Content.Pipeline.Graphics;
 using MonoGame.Extended.Tiled;
 using MonoGame.Extended.Tiled.Serialization;
-using MonoGame.Framework.Utilities.Deflate;
+using MonoGame.Framework.Utilities;
 using CompressionMode = System.IO.Compression.CompressionMode;
 using GZipStream = System.IO.Compression.GZipStream;
 
@@ -316,7 +316,7 @@ namespace MonoGame.Extended.Content.Pipeline.Tiled
             return compressionMode switch
             {
                 "gzip" => new GZipStream(memoryStream, CompressionMode.Decompress),
-                "zlib" => new ZlibStream(memoryStream, Framework.Utilities.Deflate.CompressionMode.Decompress),
+                "zlib" => new ZlibStream(memoryStream, Framework.Utilities.CompressionMode.Decompress),
                 _ => memoryStream
             };
         }
